@@ -10,5 +10,12 @@ package ArbolBinario;
  * @author Lester Trejos
  */
 public class Arbol {
+    Arbol izq;
+    Arbol der;
+    int num;
+
+    public Arbol(int num) {
+        this.num = num;
+    }
     
 }

@@ -5,15 +5,22 @@
  */
 package Main;
 
+import ArbolBinario.*;
+
 /**
  *
  * @author Lester Trejos
  */
 public class main {
 
+   static MetodosArbol metArbol = new MetodosArbol();
     
     public static void main(String[] args) {
-
+        llenarArbol();
+    }
+    
+    public static void llenarArbol(){
+        
     }
 
 }
