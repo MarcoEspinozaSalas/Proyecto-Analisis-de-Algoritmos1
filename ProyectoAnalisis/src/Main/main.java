@@ -11,10 +11,9 @@ package Main;
  */
 public class main {
 
-    int a;
     
     public static void main(String[] args) {
-        int a = 0;
+
     }
-    //me cago en mi vida
+
 }
