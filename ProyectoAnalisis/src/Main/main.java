@@ -11,9 +11,8 @@ package Main;
  */
 public class main {
 
-    /**
-     * @param args the command line arguments
-     */
+    int a;
+    
     public static void main(String[] args) {
         // TODO code application logic here
     }
