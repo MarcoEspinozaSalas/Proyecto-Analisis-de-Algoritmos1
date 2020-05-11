@@ -5,14 +5,19 @@
  */
 package Main;
 
+import Grafos.MetodosGrafo;
+
 /**
  *
  * @author Lester Trejos
  */
 public class main {
+    static MetodosGrafo mg = new MetodosGrafo();
 
     
     public static void main(String[] args) {
+        mg.insertAutomatico(100000);
+        mg.print();
 
     }
 
