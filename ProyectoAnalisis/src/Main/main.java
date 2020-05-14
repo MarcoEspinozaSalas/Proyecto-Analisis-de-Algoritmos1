@@ -12,15 +12,26 @@ import ArbolBinario.*;
  * @author Lester Trejos
  */
 public class main {
-
-   static MetodosArbol metArbol = new MetodosArbol();
+    
+    static MetodosArbol metArbol = MetodosArbol.getInstance();
     
     public static void main(String[] args) {
-        llenarArbol();
+        
+        int cant = 10;
+      
+        for (int i = 0; i < cant; i++) {
+            
+            llenarArbol(i);
+            
+        }
+        Arbol aux = metArbol.raiz;
+        metArbol.preOrden(aux);
     }
     
-    public static void llenarArbol(){
-        
+    public static void llenarArbol(int i){
+  
+        Arbol aux = metArbol.raiz;
+        String result = metArbol.insertar(aux);
     }
 
 }
