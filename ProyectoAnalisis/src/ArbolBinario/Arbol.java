@@ -10,5 +10,38 @@ package ArbolBinario;
  * @author Lester Trejos
  */
 public class Arbol {
+    Arbol izq;
+    Arbol der;
+    int num;
+   
+    public static Arbol instance = null;
+    public static Arbol getInstance(){
+        if(instance == null){
+            instance = new Arbol();
+        }
+        return instance;
+    }
+    
+     public Arbol(int num)
+    {
+        this.num = num;
+    }
+     
+     public Arbol(){
+     }
+
+    public Arbol getIzq() {
+        return izq;
+    }
+
+    public Arbol getDer() {
+        return der;
+    }
+
+    public int getNum() {
+        return num;
+    }
+     
+     
     
 }
