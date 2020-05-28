@@ -17,7 +17,7 @@ public class main {
     
     public static void main(String[] args) {
         
-        int cant = 10;
+        int cant = 10000;
       
         for (int i = 0; i < cant; i++) {
             
@@ -26,12 +26,14 @@ public class main {
         }
         Arbol aux = metArbol.raiz;
         metArbol.preOrden(aux);
+        
     }
     
     public static void llenarArbol(int i){
   
         Arbol aux = metArbol.raiz;
         String result = metArbol.insertar(aux);
+        System.out.println(result);
     }
 
 }
