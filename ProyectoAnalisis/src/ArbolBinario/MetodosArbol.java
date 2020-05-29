@@ -29,13 +29,13 @@ public class MetodosArbol {
         if (raiz == null)
         {
             raiz = nuevo;
-            return mensaje = "Insertado";
+            return mensaje = "";
         }
         if (num < aux.num)
         {
             if (aux.izq == null) { 
                 aux.izq = nuevo; 
-                return mensaje =  "Insertado";
+                return mensaje =  "";
             }
             else
             { 
@@ -47,7 +47,7 @@ public class MetodosArbol {
             {
                 if (aux.der == null) { 
                     aux.der = nuevo;  
-                    return mensaje = "Insertado";
+                    return mensaje = "";
                 }
                 else
                 { 
@@ -62,14 +62,7 @@ public class MetodosArbol {
     }
     
    
-    public void preOrden(Arbol aux) {
-        if (aux == null) {
-            return;
-        }
-        System.out.println(aux.num);
-        preOrden(aux.izq);
-        preOrden(aux.der);
-    }
+    
     
    
 }

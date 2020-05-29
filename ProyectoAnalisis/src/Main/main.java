@@ -6,6 +6,7 @@
 package Main;
 
 import ArbolBinario.*;
+import ProcedimientosGlobales.Procedimientos;
 
 /**
  *
@@ -14,10 +15,11 @@ import ArbolBinario.*;
 public class main {
     
     static MetodosArbol metArbol = MetodosArbol.getInstance();
+    static Procedimientos metProcedimientos = Procedimientos.getInstance();
     
     public static void main(String[] args) {
         
-        int cant = 10000;
+        int cant = 1000;
       
         for (int i = 0; i < cant; i++) {
             
@@ -25,8 +27,12 @@ public class main {
             
         }
         Arbol aux = metArbol.raiz;
-        metArbol.preOrden(aux);
-        
+        metProcedimientos.recorridoProfundidad(aux);
+        //System.out.println(metProcedimientos);
+        System.out.println("----------------------------------");
+
+        //metProcedimientos.recorridoAnchura(aux);
+      
     }
     
     public static void llenarArbol(int i){
