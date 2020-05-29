@@ -10,9 +10,9 @@ package ArbolBinario;
  * @author Lester Trejos
  */
 public class Arbol {
-    Arbol izq;
-    Arbol der;
-    int num;
+   public Arbol izq;
+   public Arbol der;
+   public int num;
    
     public static Arbol instance = null;
     public static Arbol getInstance(){
@@ -30,7 +30,7 @@ public class Arbol {
      public Arbol(){
      }
 
-    public Arbol getIzq() {
+   /* public Arbol getIzq() {
         return izq;
     }
 
@@ -40,7 +40,7 @@ public class Arbol {
 
     public int getNum() {
         return num;
-    }
+    }*/
      
      
     
