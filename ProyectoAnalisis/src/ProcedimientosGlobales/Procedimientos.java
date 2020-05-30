@@ -14,9 +14,23 @@ import java.util.Queue;
  * @author marco
  */
 public class Procedimientos {
-       public  static   int cantidadDeAsignaciones = 0;
-   public  static  int cantidadDeComparaciones = 0;
-    
+   //Globals
+   //--------------Arbol--------------
+   //Profundidad
+   public  static   int cantidadDeAsignacionesAPro = 0;
+   public  static  int cantidadDeComparacionesAPro = 0;
+   //Anchura
+   public  static   int cantidadDeAsignacionesAAnc = 0;
+   public  static  int cantidadDeComparacionesAAnc = 0;
+   //--------------Grafo--------------
+   //Profundidad
+   public  static   int cantidadDeAsignacionesGPro = 0;
+   public  static  int cantidadDeComparacionesGPro = 0;
+   //Amplitud
+   public  static   int cantidadDeAsignacionesGAmp = 0;
+   public  static  int cantidadDeComparacionesGAmp = 0;
+   
+   
     public static Procedimientos instance = null;
         public static Procedimientos getInstance(){
             if(instance == null){
@@ -25,22 +39,17 @@ public class Procedimientos {
             return instance;
         }
         
-
     public void recorridoProfundidad(Arbol aux) {
-        cantidadDeComparaciones++;
+        cantidadDeComparacionesAPro++;
         if (aux == null) {
             return;
         }
-        System.out.println(aux.num);
-        cantidadDeAsignaciones++;
+        //System.out.println(aux.num);
+        cantidadDeAsignacionesAPro++;
         recorridoProfundidad(aux.izq);
-        cantidadDeAsignaciones++;
+        cantidadDeAsignacionesAPro++;
         recorridoProfundidad(aux.der);
-        
-        System.out.println("Cantidad de comparaciones:" +" "+ cantidadDeComparaciones);
-        System.out.println("Cantidad de asignaciones:" +" "+ cantidadDeAsignaciones);
     }
-    
     /*
    public void profundidad(vertice grafo)//metodo que imprime el inicio en profundidad
         {
@@ -83,108 +92,36 @@ public class Procedimientos {
         }
    
    */
-       /* public void MorrisTraversal (Arbol root) 
-        {
-            Arbol curr = root;
-            while (curr != null)
-            {
-                if (curr.getIzq() != null) 
-                {
-                    // find inorder predecessor of left subtree
-                    Arbol pre = curr.getIzq();
-                    while (pre.getDer() != null && pre.getDer() != curr) 
-                    {
-                        pre = pre.getDer();
-                    }
-                    if (pre.getDer() == null) 
-                    {
-                        // Threaded property for this node was not set. Set it now
-                        pre.getDer() = curr;
-                        curr = curr.getIzq(); // Thread created. Switch to this subtree now
-                    } else 
-                    {
-                        // This means pre.right = curr
-                        // Which implies that thread for this was set already, 
-                        // So we do not need to traverse this subtree again
-                        pre.getDer() = null; // reset the thread we created earlier
-                        //print (curr); 
-                        curr = curr.getDer();
-                    }
-                } else 
-                {
-                    // no left subtree, print yourself and get to right subtree
-                    print (curr); 
-                    // we will never get right=null till the end because of above threads
-                    curr = curr.right; 
-                }
-            }
-        }*/
-   /*public void morrisTraversalPreorder(Arbol node) { 
-        while (node != null) { 
-  
-            // If left child is null, print the current node data. Move to 
-            // right child. 
-            if (node.izq == null) { 
-                System.out.println(node.num + " "); 
-                node = node.der; 
-            } else { 
-  
-                // Find inorder predecessor 
-                Arbol current = node.izq; 
-                while (current.der != null && current.der != node) { 
-                    current = current.der; 
-                } 
-  
-                // If the right child of inorder predecessor  
-                // already points to this node 
-                if (current.der == node) { 
-                    current.der = null; 
-                    node = node.der; 
-                } 
-   
-                // If right child doesn't point to this node, then print 
-                // this node and make right child point to this node 
-                else { 
-                    System.out.println(node.num + " "); 
-                    current.der = node; 
-                    node = node.izq; 
-                } 
-            } 
-        } 
-    }*/ 
-    
+       
    public void recorridoAnchura(Arbol aux)  
     { 
       
         Queue<Arbol> queue = new LinkedList<>(); 
-        cantidadDeComparaciones++;
+        cantidadDeComparacionesAAnc++;
         queue.add(aux);  
        
         while (!queue.isEmpty())  
         { 
-            cantidadDeComparaciones++;
-            cantidadDeAsignaciones++;
+            cantidadDeComparacionesAAnc++;
+            cantidadDeAsignacionesAAnc++;
             Arbol tempNode = queue.poll(); 
-            System.out.println(tempNode.num + " "); 
+            //System.out.println(tempNode.num + " "); 
   
             /*Enqueue left child */
-            cantidadDeComparaciones++;
+            cantidadDeComparacionesAAnc++;
             if (tempNode.izq != null) { 
                 //cantidadDeAsignaciones++;
                 queue.add(tempNode.izq); 
             } 
   
             /*Enqueue right child */
-            cantidadDeComparaciones++;
+            cantidadDeComparacionesAAnc++;
             if (tempNode.der != null) { 
-                cantidadDeAsignaciones++;
+                cantidadDeAsignacionesAAnc++;
                 queue.add(tempNode.der); 
             } 
         }
-        
-        System.out.println("Cantidad de comparaciones:" +" "+ cantidadDeComparaciones);
-        System.out.println("Cantidad de asignaciones:" +" "+ cantidadDeAsignaciones);
-        
+                
     } 
            
    

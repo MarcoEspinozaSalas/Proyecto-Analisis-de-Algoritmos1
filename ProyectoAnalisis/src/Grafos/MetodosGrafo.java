@@ -103,20 +103,5 @@ public class MetodosGrafo {
           }
         }
         return cont;
-    }
-    
-    
-    
-    
-    mg.insertAutomatico(1000);
-        //mg.print();
-        //System.out.println();
-        
-        
-        System.out.println(mg.fuerteConexo());
-        
-        //mg.buscar(100000);
-    
-
-    
+    }    
 }

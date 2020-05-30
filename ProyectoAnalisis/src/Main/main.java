@@ -30,33 +30,37 @@ public class main {
             llenarArbol(i);
             
         }
+        
+        System.out.println("------------Arbol--------------");
+        
+        
         Arbol aux = metArbol.raiz;
         metProcedimientos.recorridoProfundidad(aux);
-        //System.out.println(metProcedimientos);
-        System.out.println("----------------------------------");
+        System.out.println("Cantidad de comparaciones:" +" "+ metProcedimientos.cantidadDeComparacionesAPro);
+        System.out.println("Cantidad de asignaciones:" +" "+ metProcedimientos.cantidadDeAsignacionesAPro);
+        System.out.println("_______________________________");
+        metProcedimientos.recorridoAnchura(aux);
+        System.out.println("Cantidad de comparaciones:" +" "+ metProcedimientos.cantidadDeComparacionesAAnc);
+        System.out.println("Cantidad de asignaciones:" +" "+ metProcedimientos.cantidadDeAsignacionesAAnc);
+        
+        System.out.println("------------Grafo--------------");
 
-        //metProcedimientos.recorridoAnchura(aux);
         
+        //mg.insertAutomatico(10000);
         
+        //System.out.println("hola");
         
-        
-        mg.insertAutomatico(1000);
-        //mg.print();
-        //System.out.println();
-        
-        
-        System.out.println(mg.fuerteConexo());
+        //System.out.println(mg.fuerteConexo());
         
         //mg.buscar(100000);
-    
-      
+       
     }
     
     public static void llenarArbol(int i){
   
         Arbol aux = metArbol.raiz;
         String result = metArbol.insertar(aux);
-        System.out.println(result);
+        //System.out.println(result);
     }
 
 }
