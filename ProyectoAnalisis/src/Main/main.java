@@ -8,11 +8,15 @@ package Main;
 import ArbolBinario.*;
 import ProcedimientosGlobales.Procedimientos;
 
+import Grafos.MetodosGrafo;
+
 /**
  *
  * @author Lester Trejos
  */
 public class main {
+    static MetodosGrafo mg = new MetodosGrafo();
+
     
     static MetodosArbol metArbol = MetodosArbol.getInstance();
     static Procedimientos metProcedimientos = Procedimientos.getInstance();
