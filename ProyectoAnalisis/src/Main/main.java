@@ -36,6 +36,19 @@ public class main {
         System.out.println("----------------------------------");
 
         //metProcedimientos.recorridoAnchura(aux);
+        
+        
+        
+        
+        mg.insertAutomatico(1000);
+        //mg.print();
+        //System.out.println();
+        
+        
+        System.out.println(mg.fuerteConexo());
+        
+        //mg.buscar(100000);
+    
       
     }
     
