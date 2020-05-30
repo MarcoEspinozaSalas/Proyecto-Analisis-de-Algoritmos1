@@ -20,16 +20,28 @@ public class Procedimientos {
    //Profundidad
    public  static   int cantidadDeAsignacionesAPro = 0;
    public  static  int cantidadDeComparacionesAPro = 0;
+   public static long FinAPro = 0;
+   public static long InicioAPro = 0;
+   public static long tiempoAPro = 0;
    //Anchura
    public  static   int cantidadDeAsignacionesAAnc = 0;
    public  static  int cantidadDeComparacionesAAnc = 0;
+   public static long FinAAnc = 0;
+   public static long InicioAAnc = 0;
+   public static long tiempoAAnc = 0;
    //--------------Grafo--------------
    //Profundidad
    public  static   int cantidadDeAsignacionesGPro = 0;
    public  static  int cantidadDeComparacionesGPro = 0;
+   public static long FinGPro = 0;
+   public static long InicioGPro = 0;
+   public static long tiempoGPro = 0;
    //Amplitud
    public  static   int cantidadDeAsignacionesGAmp = 0;
    public  static  int cantidadDeComparacionesGAmp = 0;
+   public static long FinGAmp= 0;
+   public static long InicioGAmp = 0;
+   public static long tiempoGAmp = 0;
    
    
     public static Procedimientos instance = null;
@@ -41,6 +53,7 @@ public class Procedimientos {
         }
         
     public void recorridoProfundidad(Arbol aux) {
+        
         cantidadDeComparacionesAPro++;
         if (aux == null) {
             return;
@@ -108,7 +121,7 @@ public class Procedimientos {
        
    public void recorridoAnchura(Arbol aux)  
     { 
-      
+       
         Queue<Arbol> queue = new LinkedList<>(); 
         cantidadDeComparacionesAAnc++;
         queue.add(aux);  
@@ -134,7 +147,7 @@ public class Procedimientos {
                 queue.add(tempNode.der); 
             } 
         }
-                
+             
     } 
            
    
