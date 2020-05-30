@@ -29,10 +29,13 @@ public class MetodosGrafo {
         System.out.println("-----Vertice NO encontrado");
         return null;
     }
-
-    void insertarVertices(int nombre) {
-        Vertice nuevo = new Vertice(nombre);
-
+    
+    void insertarVertices(int num) {
+        Vertice nuevo = new Vertice(num);
+        if (grafo == null) {
+            grafo = nuevo;
+            return;
+        }
         nuevo.sigV = grafo;
         grafo = nuevo;
     }
@@ -41,8 +44,7 @@ public class MetodosGrafo {
         
 
         for (int i = 0; i < cant; i++) {
-
-            insertarVertices(i);
+            insertarVertices(i);      
         }
 
         for (int i = 0; i < cant; i++) {

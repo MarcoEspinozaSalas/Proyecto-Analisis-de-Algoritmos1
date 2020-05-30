@@ -21,21 +21,21 @@ public class MetodosArbol {
             return instance;
         }
         
-    String mensaje;
-    public String insertar(Arbol aux)
+    public static int cont;
+    public boolean insertar(Arbol aux)
     {
-        int num = (int) (Math.random() * 100000) + 1;
+        int num = (int) (Math.random() * 1000000) + 1;
         Arbol nuevo = new Arbol(num);
         if (raiz == null)
         {
             raiz = nuevo;
-            return mensaje = "";
+            return true;
         }
         if (num < aux.num)
         {
             if (aux.izq == null) { 
                 aux.izq = nuevo; 
-                return mensaje =  "";
+                return true;
             }
             else
             { 
@@ -47,7 +47,7 @@ public class MetodosArbol {
             {
                 if (aux.der == null) { 
                     aux.der = nuevo;  
-                    return mensaje = "";
+                    return true;
                 }
                 else
                 { 
@@ -56,9 +56,10 @@ public class MetodosArbol {
             }
             else
                 {
-                   return mensaje = "No se puede repetir id";
+                   cont++;
+                   return false;
                 }
-        return mensaje;
+        return true;
     }
     
    
