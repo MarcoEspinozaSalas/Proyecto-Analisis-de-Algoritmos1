@@ -2,8 +2,14 @@ package Grafos;
 
 public class MetodosGrafo {
     
-    Vertice grafo;
-
+  public static  Vertice grafo;
+ public static MetodosGrafo instance = null;
+        public static MetodosGrafo getInstance(){
+            if(instance == null){
+                instance = new MetodosGrafo();
+            }
+            return instance;
+        }
     public MetodosGrafo() {
         this.grafo = null;
     }

@@ -6,6 +6,7 @@
 package ProcedimientosGlobales;
 
 import ArbolBinario.Arbol;
+import Grafos.*;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -50,48 +51,60 @@ public class Procedimientos {
         cantidadDeAsignacionesAPro++;
         recorridoProfundidad(aux.der);
     }
-    /*
-   public void profundidad(vertice grafo)//metodo que imprime el inicio en profundidad
+    
+   public void profundidadGrafo(Vertice grafo)//metodo que imprime el inicio en profundidadGrafo
         {
-            if ((grafo == null)|(grafo.marca == true))
+                cantidadDeComparacionesGPro++;
+            if ((grafo == null)|(grafo.visitado == true))
                 return;
             else{
-                grafo.marca = true;
-                arco aux = grafo.sigA;
+                cantidadDeAsignacionesGPro++;
+                grafo.visitado = true;
+                cantidadDeAsignacionesGPro++;
+                Arco aux = grafo.subListaArcos;
                 while (aux != null){//cambiar los outPrint por listModel.addElement
-                    System.out.println("Origen: " + grafo.nombre);
-                    System.out.println("Peso: " + aux.peso);
-                    System.out.println("Destino: " + aux.destino.nombre);
-                    profundidad(aux.destino);
+                    cantidadDeComparacionesGPro++;
+                   /* System.out.println("Origen: " + grafo.num);
+                    System.out.println("Peso: " + aux.size);
+                    System.out.println("Destino: " + aux.destino.sigV);*/
+                    cantidadDeAsignacionesGPro++;
+                    profundidadGrafo(aux.destino);
+                    cantidadDeAsignacionesGPro++;
                     aux = aux.sigA;
                 }
             }
         }
 
-   public void amplitud(vertice grafo)// metodo para imprimir el inicio en amplitud
+   public void amplitudGrafo(Vertice grafo)// metodo para imprimir el inicio en amplitudGrafo
         {
+            cantidadDeComparacionesGAmp++;
             if (grafo == null)
                 System.out.println("No hay grafo");
             else
             {
-                vertice temp = grafo;
+                cantidadDeAsignacionesGAmp++;
+                Vertice temp = grafo;
                 while (temp != null)
                 {
-                    System.out.println("Vertice: " + temp.nombre);
-                    arco aux = temp.sigA;
+                    cantidadDeComparacionesGAmp++;
+                    //System.out.println("Vertice: " + temp.num);
+                    cantidadDeAsignacionesGAmp++;
+                    Arco aux = temp.subListaArcos;
                     while (aux != null)
                     {
-                        //listModel.addElement("Peso: " + aux.peso);
-                       System.out.println("Destino: " + aux.destino.nombre);
+                        cantidadDeComparacionesGAmp++;
+                       //System.out.println("Destino: " + aux.destino.num);
+                       cantidadDeAsignacionesGAmp++;
                         aux = aux.sigA;
                     }
-                    System.out.println("-----------");
+                    //System.out.println("-----------");
+                    cantidadDeAsignacionesGAmp++;
                     temp = temp.sigV;
                 }
             }
         }
    
-   */
+   
        
    public void recorridoAnchura(Arbol aux)  
     { 
@@ -110,7 +123,7 @@ public class Procedimientos {
             /*Enqueue left child */
             cantidadDeComparacionesAAnc++;
             if (tempNode.izq != null) { 
-                //cantidadDeAsignaciones++;
+                cantidadDeAsignacionesAAnc++;
                 queue.add(tempNode.izq); 
             } 
   

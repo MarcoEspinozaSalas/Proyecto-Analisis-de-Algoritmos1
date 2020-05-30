@@ -9,6 +9,7 @@ import ArbolBinario.*;
 import ProcedimientosGlobales.Procedimientos;
 
 import Grafos.MetodosGrafo;
+import Grafos.Vertice;
 
 /**
  *
@@ -20,6 +21,7 @@ public class main {
     
     static MetodosArbol metArbol = MetodosArbol.getInstance();
     static Procedimientos metProcedimientos = Procedimientos.getInstance();
+     static MetodosGrafo metGrafo = MetodosGrafo.getInstance();
     
     public static void main(String[] args) {
         
@@ -44,15 +46,17 @@ public class main {
         System.out.println("Cantidad de asignaciones:" +" "+ metProcedimientos.cantidadDeAsignacionesAAnc);
         
         System.out.println("------------Grafo--------------");
-
+        mg.insertAutomatico(1000);     
+        System.out.println(mg.fuerteConexo());
+        metProcedimientos.amplitudGrafo(metGrafo.grafo);
+        System.out.println("Cantidad de comparaciones:" +" "+ metProcedimientos.cantidadDeComparacionesGAmp);
+        System.out.println("Cantidad de asignaciones:" +" "+ metProcedimientos.cantidadDeAsignacionesGAmp);
+        System.out.println("_______________________________");
+        metProcedimientos.profundidadGrafo(metGrafo.grafo);
+        System.out.println("Cantidad de comparaciones:" +" "+ metProcedimientos.cantidadDeComparacionesGPro);
+        System.out.println("Cantidad de asignaciones:" +" "+ metProcedimientos.cantidadDeAsignacionesGPro);
+         System.out.println("_______________________________");
         
-        //mg.insertAutomatico(10000);
-        
-        //System.out.println("hola");
-        
-        //System.out.println(mg.fuerteConexo());
-        
-        //mg.buscar(100000);
        
     }
     

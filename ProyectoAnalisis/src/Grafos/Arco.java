@@ -2,10 +2,10 @@ package Grafos;
 
 public class Arco {
 
-    Vertice destino;
-    Vertice origen;
-    Arco sigA;
-    int size;
+   public Vertice destino;
+   public Vertice origen;
+   public Arco sigA;
+   public int size;
 
     public Arco(Vertice destino, int size) {
         this.destino = destino;
