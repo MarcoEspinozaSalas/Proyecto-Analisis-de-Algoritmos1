@@ -80,8 +80,9 @@ public class main {
     static void medicionGrafo() {//medicion de los datos del grafos
         System.out.println("------------Grafo--------------");
         mg.insertAutomatico(1000); 
-        //mg.insertAutomatico(2500);
-        //mg.insertAutomatico(3000); 
+        //mg.insertAutomatico(1500);
+        //mg.insertAutomatico(2500); 
+        //mg.insertAutomatico(3500);
         //mg.insertAutomatico(4500);
         //mg.insertAutomatico(5000);
 

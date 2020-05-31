@@ -117,7 +117,6 @@ public class Procedimientos {
                 queue.add(tempNode.der); //se guarda en cola
             }
         }
-
     }
 
     public void profundidadGrafo(Vertice grafo)//método recursivo que imprime el inicio en profundidad de un Grafo
@@ -131,6 +130,7 @@ public class Procedimientos {
             cantidadDeAsignacionesGPro++;
             lineasGPro++;
             grafo.visitado = true;//mueve marca de false a true
+            lineasGPro++;
             System.out.println("Vertice:" + grafo.num);
             cantidadDeAsignacionesGPro++;
             lineasGPro++;
@@ -138,7 +138,6 @@ public class Procedimientos {
             lineasGPro++;
             while (aux != null) {//se podría imprimir la información de los vértices y sus arcos si se quiere
                 cantidadDeComparacionesGPro++;
-                lineasGPro++;
                 cantidadDeAsignacionesGPro++;
                 lineasGPro++;
                 profundidadGrafo(aux.destino);//recursión
