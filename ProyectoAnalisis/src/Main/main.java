@@ -25,7 +25,7 @@ public class main {
 
     public static void main(String[] args) {//llamadas a los métodos de inserción
 
-        medicionArbol();
+        //medicionArbol();
 
         medicionGrafo();
 
@@ -108,5 +108,6 @@ public class main {
         System.out.println("Cantidad de tiempo ejecucion en milisegundos:" + " " + metProcedimientos.tiempoGAmp);
         System.out.println("Cantidad de lineas:" + " " + metProcedimientos.lineasGAmp);
         System.out.println("_______________________________");
+
     }
 }

@@ -42,16 +42,14 @@ public class MetodosGrafo {
     
     public void insertAutomatico(int cant) {
         
-
         for (int i = 0; i < cant; i++) {
             insertarVertices(i);      
         }
-
         for (int i = 0; i < cant; i++) {
 
             for (int j = 0; j < cant; j++) {
-
-                insertarArco(i, j, 2);
+                int num = (int) (Math.random() * 20) + 1;
+                insertarArco(i, j, num);
             }
 
         }
