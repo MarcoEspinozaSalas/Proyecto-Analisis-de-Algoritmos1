@@ -1,7 +1,10 @@
 package Grafos;
-
+/**
+ *
+ * @author Alejandro Acuña
+ */
 public class Arco {
-
+ 
    public Vertice destino;
    public Vertice origen;
    public Arco sigA;
