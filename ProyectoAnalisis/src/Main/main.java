@@ -27,7 +27,7 @@ public class main {
 
         medicionArbol();
 
-        medicionGrafo();
+        //medicionGrafo();
 
     }
 
@@ -40,7 +40,7 @@ public class main {
     static void medicionArbol() { //medicion de los datos del árbol binario
         System.out.println("------------Arbol--------------");
         //Datos de entrada
-        int cant = 1000;
+        int cant = 100;
         //int cant = 5000;
         //int cant = 10000;
         //int cant = 100000;
@@ -81,7 +81,7 @@ public class main {
     static void medicionGrafo() {//medicion de los datos del grafos
         System.out.println("------------Grafo--------------");
          //Datos de entrada
-        mg.insertAutomatico(1000); 
+        mg.insertAutomatico(100); 
         //mg.insertAutomatico(1500);
         //mg.insertAutomatico(2500); 
         //mg.insertAutomatico(3500);
