@@ -1,3 +1,4 @@
+//package
 package Grafos;
 /**
  *
@@ -31,7 +32,6 @@ public class MetodosGrafo {
         while (temp != null) {
             //si encuentra el vertice lo retorna
             if (temp.num == nombre) {
-                //System.out.println("-----Vertice encontrado");
                 return temp;
             }
             //se mueve al siquiente vertice
